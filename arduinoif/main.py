@@ -37,6 +37,11 @@ class ArduinoCommand(BaseModel):
     value: int
 
 
+class ArduinoStop(BaseModel):
+    device: Device | None = None
+    motor: Motor
+
+
 @app.post("/command", summary="send a motor command")
 def post_command(query: ArduinoCommand):
     """
@@ -56,6 +61,36 @@ def post_command(query: ArduinoCommand):
     print(command)
     result = subprocess.run(command, capture_output=True)
     print(result)
+    if result.returncode == 0:
+        # success
+        return {
+            "message": "ok",
+            "data": [
+                "message sent successfully"
+            ]
+        }
+    else:
+        # something went wrong
+        return {
+            "message": result.stderr.decode()
+        }, 500
+
+
+@app.post("/stop", summary="stop a motor")
+def post_stop(query: ArduinoStop):
+    """
+    post a stop-command to the arduino over serial
+    """
+    command = ["mount_clt"]
+    if query.device is not None:
+        command += [f"--device={query.device.value}"]
+    command += [
+        "stop",
+        query.motor.value,
+    ]
+    result = subprocess.run(command, capture_output=True)
+    import time
+    time.sleep(1)
     if result.returncode == 0:
         # success
         return {

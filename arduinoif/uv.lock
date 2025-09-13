@@ -72,8 +72,83 @@ wheels = [
 ]
 
 [package.optional-dependencies]
+elements = [
+    { name = "flask-openapi3-elements" },
+]
+rapidoc = [
+    { name = "flask-openapi3-rapidoc" },
+]
+rapipdf = [
+    { name = "flask-openapi3-rapipdf" },
+]
+redoc = [
+    { name = "flask-openapi3-redoc" },
+]
+scalar = [
+    { name = "flask-openapi3-scalar" },
+]
 swagger = [
     { name = "flask-openapi3-swagger" },
+]
+
+[[package]]
+name = "flask-openapi3-elements"
+version = "9.0.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask-openapi3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cd/82/6203d45e0e5faa28f3b24723f3520c3f8d0d89c83c9e724317791fe7c8da/flask_openapi3_elements-9.0.6.tar.gz", hash = "sha256:6000e09d046e4a1963a3ee8cc3e09444b8fd212b3f2216b8bd4bb0fbc2e5297d", size = 650819, upload-time = "2025-07-18T02:33:09.378Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/23/47/81406d6ce563af98dc2950a6e36708170cc14308f1ce445047e5735b7a27/flask_openapi3_elements-9.0.6-py3-none-any.whl", hash = "sha256:1dab60be067ed5ad694bdc615c42c9823f8e53173bf19e63f02dd4ec6dcbd778", size = 652155, upload-time = "2025-07-18T02:33:07.946Z" },
+]
+
+[[package]]
+name = "flask-openapi3-rapidoc"
+version = "9.3.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask-openapi3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/82/1f/07405956cc53775add9ff8b520b4ce73d8afff32b4ac91b3c74dbdbd4ec5/flask_openapi3_rapidoc-9.3.8.tar.gz", hash = "sha256:f298d2f5cb1019c4f394f0b358cade68084555c1499c03abec7cd50b6127459d", size = 221774, upload-time = "2024-10-12T02:02:35.551Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c9/17/a4ac71b8dc36079c9ed7204b56dce8a6ac2ddc93dafc507806572a3244a7/flask_openapi3_rapidoc-9.3.8-py3-none-any.whl", hash = "sha256:3785ccaeff56c8644f03d8be7a5ba1d9a2bfa9237f55b38703ff332742403fea", size = 223034, upload-time = "2024-10-12T02:02:34.365Z" },
+]
+
+[[package]]
+name = "flask-openapi3-rapipdf"
+version = "2.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask-openapi3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e8/6f/2589d16beffc956bb0897d536406c548a70a6d1c3b24cefdc1be654152a9/flask_openapi3_rapipdf-2.2.1.tar.gz", hash = "sha256:87d3be483581f3a92d1bdd175b2227987a26929f45a7ba1e0aa7131a842a31b0", size = 1101679, upload-time = "2024-06-16T03:41:47.146Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f1/ed/69a741bb4e44822ee0fcdc2d9d0f7b594bed5565488edd5cd829eb0fda4d/flask_openapi3_rapipdf-2.2.1-py3-none-any.whl", hash = "sha256:3439f3b0138908a75a3ab963a27325fb16957355be2b1ab0010a62ffa2f9eb36", size = 1105451, upload-time = "2024-06-16T03:41:28.017Z" },
+]
+
+[[package]]
+name = "flask-openapi3-redoc"
+version = "2.5.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask-openapi3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/35/d7/c30eb265524747240cbb54c7f45e9ab9e7131f4886f434df8ddd3b701b95/flask_openapi3_redoc-2.5.0.tar.gz", hash = "sha256:57a56eafc8ef6abfc4b05743cb5eb0dcf0ca4ae8d644c089e516ddcec7acd9e0", size = 282021, upload-time = "2025-04-15T02:13:31.498Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7f/07/0473eb9ed6bce98f21e88e1c659bd7154ea73bc3cb9d439fabcb6722f8b2/flask_openapi3_redoc-2.5.0-py3-none-any.whl", hash = "sha256:eb838cfc5365e7d135d0e4c53591a8570c8abe76197c9d9cfe130e7c17e64219", size = 283171, upload-time = "2025-04-15T02:13:30.049Z" },
+]
+
+[[package]]
+name = "flask-openapi3-scalar"
+version = "1.35.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask-openapi3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e5/5c/7c1d9e3a34a8c67979ff9ebb24a651fcf112373f85171f4017bd2ab019dd/flask_openapi3_scalar-1.35.4.tar.gz", hash = "sha256:f780c25f8302aff32083bfd294c9f89906d88714bfe5e44fe350b20f813e30ee", size = 839468, upload-time = "2025-09-13T01:50:53.977Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/18/af/613d05e53ec9a3b3778460dfad59aedb6d6f990fdd6f524325f771a7558f/flask_openapi3_scalar-1.35.4-py3-none-any.whl", hash = "sha256:6d10384a59f845e24ca586880ed8cdb633c7aa9f37eb6275f0625edd6c0b6c9f", size = 842217, upload-time = "2025-09-13T01:50:51.95Z" },
 ]
 
 [[package]]
@@ -185,13 +260,13 @@ name = "surge-arduinoif"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "flask-openapi3", extra = ["swagger"] },
+    { name = "flask-openapi3", extra = ["elements", "rapidoc", "rapipdf", "redoc", "scalar", "swagger"] },
     { name = "pydantic" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "flask-openapi3", extras = ["swagger"] },
+    { name = "flask-openapi3", extras = ["swagger", "redoc", "rapidoc", "rapipdf", "scalar", "elements"] },
     { name = "pydantic" },
 ]
 

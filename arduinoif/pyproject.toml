@@ -6,5 +6,5 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
   "pydantic",
-  "flask_openapi3[swagger]"
+  "flask_openapi3[swagger,redoc,rapidoc,rapipdf,scalar,elements]"
 ]
