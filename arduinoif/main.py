@@ -89,8 +89,6 @@ def post_stop(query: ArduinoStop):
         query.motor.value,
     ]
     result = subprocess.run(command, capture_output=True)
-    import time
-    time.sleep(1)
     if result.returncode == 0:
         # success
         return {

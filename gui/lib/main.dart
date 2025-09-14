@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-String url = "http://surge.local:5000";
+String url = "192.168.1.100:5000";
 
 void main() {
   runApp(const MyApp());
@@ -202,14 +202,6 @@ class _MotorColumnState extends State<MotorColumn> {
                     TextField(
                       keyboardType: TextInputType.numberWithOptions(),
                       controller: valueController,
-                      decoration: InputDecoration(
-                        hint: Text(
-                          "1000",
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 182, 180, 180),
-                          ),
-                        ),
-                      ),
                     ),
                   ],
                 ),
