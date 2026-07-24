@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "surge-core",   # common data types and conventions
+    "surge-user", # client to run on my laptop to interact with rpi
+    "surge-server", # runs on server to listen to TCP commands
+    "surge-framegrabber",  # grab frames from camera and write them to shm
+    "surge-arduinoif", # talks to arduino over serial
+    "surge-lt",  # ultimately, the main executable that runs everything
+]
+resolver = "3"
