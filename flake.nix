@@ -11,20 +11,16 @@
         pkgs = import nixpkgs { inherit system; };
         naersk-lib = pkgs.callPackage naersk { };
       in
-      {
+      rec {
         defaultPackage = naersk-lib.buildPackage ./.;
         devShell = with pkgs; mkShell {
           buildInputs = [ cargo rustc rustfmt pre-commit rustPackages.clippy 
-            cargo-watch cargo-machete pkg-config libcamera
-            clang
-            clang-tools
+            cargo-watch cargo-machete pkg-config cfitsio libclang.dev
           ];
-          hardeningDisable = [ "fortify" ];
           RUST_SRC_PATH = rustPlatform.rustLibSrc;
-          LIBCLANG_PATH = with pkgs; "${libclang.lib}/lib";
-          BINDGEN_EXTRA_CLANG_ARGS =
-            with pkgs;
-            "-isystem ${libclang.lib}/lib/clang/${lib.versions.major (lib.getVersion clang)}/include";
+          LIBCLANG_PATH = "${pkgs.libclang.lib}/lib";
+          # NIX_LD_LIBRARY_PATH =
+          # PATH = "${./libASICameraSDK/include}";
         };
       }
     );

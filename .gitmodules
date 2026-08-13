@@ -1,3 +1,0 @@
-[submodule "libcamera-rs"]
-	path = libcamera-rs
-	url = git@github.com:lit-robotics/libcamera-rs.git

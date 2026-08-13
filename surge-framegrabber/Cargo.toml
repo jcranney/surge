@@ -5,8 +5,5 @@ edition = "2024"
 
 [dependencies]
 anyhow = "1.0.104"
-libcamera = { version = "0.7.0" }
+cameraunit_asi = "4.1.0"
 risio = "0.2.2"
-
-[target.armv7-unknown-linux-gnueabihf]
-linker = "arm-linux-gnueabihf-gcc"
