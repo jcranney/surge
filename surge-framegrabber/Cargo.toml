@@ -5,5 +5,6 @@ edition = "2024"
 
 [dependencies]
 anyhow = "1.0.104"
-cameraunit_asi = "4.1.0"
+cameraunit_asi = { path = "../cameraunit-asi" }
 risio = "0.2.2"
+termion = "4.0.6"

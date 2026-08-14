@@ -274,9 +274,7 @@ dependencies = [
 
 [[package]]
 name = "cameraunit_asi"
-version = "4.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e3695fd031e7e9d7680605d6acd5a53c737249fda8ca589834532dfe343bdc27"
+version = "4.1.1"
 dependencies = [
  "bindgen",
  "cameraunit",
@@ -506,7 +504,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.61.2",
+ "windows-sys 0.59.0",
 ]
 
 [[package]]
@@ -1011,6 +1009,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "numtoa"
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6aa2c4e539b869820a2b82e1aef6ff40aa85e65decdd5185e83fb4b1249cd00f"
+
+[[package]]
 name = "objc2"
 version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1508,6 +1512,7 @@ dependencies = [
  "anyhow",
  "cameraunit_asi",
  "risio",
+ "termion",
 ]
 
 [[package]]
@@ -1542,6 +1547,16 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "termion"
+version = "4.0.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f44138a9ae08f0f502f24104d82517ef4da7330c35acd638f1f29d3cd5475ecb"
+dependencies = [
+ "libc",
+ "numtoa",
 ]
 
 [[package]]

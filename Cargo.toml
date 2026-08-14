@@ -6,5 +6,6 @@ members = [
     "surge-framegrabber",  # grab frames from camera and write them to shm
     "surge-arduinoif", # talks to arduino over serial
     "surge-lt",  # ultimately, the main executable that runs everything
+    "cameraunit-asi",  # camera api
 ]
 resolver = "3"
